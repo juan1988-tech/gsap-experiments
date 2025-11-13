@@ -3,9 +3,11 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+gsap.registerPlugin(useGSAP);
+
 const FirstAnimation = ():JSX.Element => {
   //first animation 
-  const roundedSquareRef = useRef<HTMLDivElement>(null);
+  const roundedSquareRef = useRef<HTMLDivElement|null>(null);
 
   useGSAP(()=>{
     gsap.to(roundedSquareRef.current,{ x: 360, duration: 2})

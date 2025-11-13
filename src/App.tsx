@@ -2,6 +2,8 @@ import type { JSX } from "react";
 import gsapBackground from './assets/images/background.gsap.jpg';
 import FirstAnimation from "./components/FirstAnimation";
 import SecondAnimation from "./components/SecondAnimation";
+import ThirdAnimation from "./components/ThirdAnimation";
+import FourthAnimation from "./components/FourthAnimation";
 
 
 function App():JSX.Element {
@@ -16,6 +18,8 @@ function App():JSX.Element {
         {/*section for animation */}
         <FirstAnimation/>
         <SecondAnimation/>
+        <ThirdAnimation/>
+        <FourthAnimation/>
       </main>    
     </div>
   )
