@@ -1,11 +1,8 @@
 import { useEffect,useState } from "react";
 import type { JSX } from "react";
-<<<<<<< HEAD
-=======
 import gsapBackground from './assets/images/background.gsap.jpg';
 import FirstAnimation from "./components/FirstAnimation";
 import SecondAnimation from "./components/SecondAnimation";
->>>>>>> parent of f6e8950 (adding more animations)
 
 // Clave falsa (para demo de CodeQL):
 const API_KEY_GOOGLE:String = "AIzaFAKE_GOOGLE_APIKEY_abcdefghijklmnop"
@@ -51,18 +48,6 @@ function App():JSX.Element {
   if (loading) return <p>Cargando...</p>
 
   return (
-<<<<<<< HEAD
-     <> 
-     <h2>Resultados de la API simulada</h2>
-      <ul>
-        {data?.map((item:any) => (
-          <li key={item.id}>
-            <strong>{item.id}</strong> — {item.title}
-          </li>
-        ))}
-      </ul>
-    </>
-=======
     <div className="bg-main-black ">
       <main className="w-3/4 flex flex-col max-w-3/4 mx-auto">
         <h1 className="w-full h-[60px] text-center pt-6 text-4xl text-light-green font-semibold">Animation with useGSAP</h1>
@@ -75,7 +60,6 @@ function App():JSX.Element {
         <SecondAnimation/>
       </main>    
     </div>
->>>>>>> parent of f6e8950 (adding more animations)
   )
 }
 
