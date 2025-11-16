@@ -34,7 +34,7 @@ export default function FourthAnimation():ReactNode {
     { text: "Box 3" }
   ]  
 
-  const animatedComponentsSet:JSX.Element[] = animatedComponents.map((item)=>{
+  const animatedComponentsSet:JSX.Element[]|EventTarget[]  = animatedComponents.map((item)=>{
             return <AnimatedCardComponent key={item.text} text={item.text} />
         })
 
@@ -44,9 +44,9 @@ export default function FourthAnimation():ReactNode {
       
       tl.current = gsap
         .timeline()
-        .to(boxes[0], { x: 120, rotation: 360 })
-        .to(boxes[1], { x: -120, rotation: -360 }, '<')
-        .to(boxes[2], { y: -166 })
+        .to(animatedComponents[0], { x: 120, rotation: 360 })
+        .to(animatedComponents[1], { x: -120, rotation: -360 }, '<')
+        .to(animatedComponents[2], { y: -166 })
         .reverse();
     },
     { scope: container }
